@@ -59,7 +59,7 @@ print("[2/7] DagsHub terhubung via Environment Variables (GitHub Secrets)...")
 # dagshub.init(repo_owner=DAGSHUB_OWNER, repo_name=DAGSHUB_REPO, mlflow=True)
 print(f"  Terhubung ke: https://dagshub.com/{DAGSHUB_OWNER}/{DAGSHUB_REPO}")
 
-mlflow.set_experiment("Fraud_Detection_CI")
+# mlflow.set_experiment("Fraud_Detection_CI")
 
 # ============================================================
 # [3/7] HYPERPARAMETER TUNING
