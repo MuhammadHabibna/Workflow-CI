@@ -44,10 +44,12 @@ jobs:
       # ========================================
       - name: Run MLflow Project
         env:
-          DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_USER_TOKEN }}
+          MLFLOW_TRACKING_URI: https://dagshub.com/MuhammadHabibna/Eksperimen_SML_Muhammad-Habib-Nur-Aiman.mlflow
+          MLFLOW_TRACKING_USERNAME: MuhammadHabibna
+          MLFLOW_TRACKING_PASSWORD: ${{ secrets.DAGSHUB_USER_TOKEN }}
         run: |
           cd MLProject
-          python modelling.py
+          mlflow run . --env-manager=local
 
       - name: Get latest MLflow run_id
         id: get_run_id
