@@ -47,7 +47,7 @@ jobs:
           DAGSHUB_USER_TOKEN: ${{ secrets.DAGSHUB_USER_TOKEN }}
         run: |
           cd MLProject
-          mlflow run . --env-manager=local
+          python modelling.py
 
       - name: Get latest MLflow run_id
         id: get_run_id
